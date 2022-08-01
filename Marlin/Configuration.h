@@ -1458,13 +1458,13 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10  // MRiscoC Avoid clips on borders
+#define PROBING_MARGIN  3 // Ender3S1 Configs
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (200*60)  // MRiscoC increase travel speed between probes
+#define XY_PROBE_FEEDRATE (500*60)  // Ender3S1 Configs
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (16*60)  // MRiscoC increase probe Z speed
+#define Z_PROBE_FEEDRATE_FAST (8*60)  // Ender3S1 Configs
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
@@ -1514,8 +1514,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2  // MRiscoC Enabled
-//#define EXTRA_PROBING    1  // MRiscoC Enabled
+#define MULTIPLE_PROBING 2    // Creality BLTouch Improve accuracy
+#define EXTRA_PROBING    1    // Creality BLTouch Improve accuracy
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
